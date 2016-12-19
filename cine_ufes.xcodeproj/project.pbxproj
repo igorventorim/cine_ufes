@@ -15,6 +15,7 @@
 		3FBEE1CF1E07F3BF00C42514 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBEE1CD1E07F3BF00C42514 /* LaunchScreen.storyboard */; };
 		3FDEED8A1E08085F006ACF51 /* Titulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEED891E08085F006ACF51 /* Titulo.swift */; };
 		3FDEED8E1E08087C006ACF51 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEED8D1E08087C006ACF51 /* Evento.swift */; };
+		3FDEED901E081120006ACF51 /* ListaFilmesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEED8F1E081120006ACF51 /* ListaFilmesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3FBEE1D01E07F3BF00C42514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FDEED891E08085F006ACF51 /* Titulo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Titulo.swift; sourceTree = "<group>"; };
 		3FDEED8D1E08087C006ACF51 /* Evento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
+		3FDEED8F1E081120006ACF51 /* ListaFilmesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaFilmesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +68,7 @@
 				3FDEED861E080829006ACF51 /* Model */,
 				3FBEE1C11E07F3BF00C42514 /* AppDelegate.swift */,
 				3FBEE1C31E07F3BF00C42514 /* ViewController.swift */,
-				3FBEE1C51E07F3BF00C42514 /* Main.storyboard */,
 				3FBEE1CB1E07F3BF00C42514 /* Assets.xcassets */,
-				3FBEE1CD1E07F3BF00C42514 /* LaunchScreen.storyboard */,
 				3FBEE1D01E07F3BF00C42514 /* Info.plist */,
 				3FBEE1C81E07F3BF00C42514 /* cine_ufes.xcdatamodeld */,
 			);
@@ -80,6 +80,7 @@
 			children = (
 				3FDEED891E08085F006ACF51 /* Titulo.swift */,
 				3FDEED8D1E08087C006ACF51 /* Evento.swift */,
+				3FDEED8F1E081120006ACF51 /* ListaFilmesTableViewController.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -87,6 +88,8 @@
 		3FDEED871E080835006ACF51 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3FBEE1C51E07F3BF00C42514 /* Main.storyboard */,
+				3FBEE1CD1E07F3BF00C42514 /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				3FBEE1C41E07F3BF00C42514 /* ViewController.swift in Sources */,
 				3FBEE1C21E07F3BF00C42514 /* AppDelegate.swift in Sources */,
 				3FDEED8E1E08087C006ACF51 /* Evento.swift in Sources */,
+				3FDEED901E081120006ACF51 /* ListaFilmesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
