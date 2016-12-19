@@ -12,19 +12,22 @@ class ListaFilmesTableViewController: UITableViewController {
 
     var filmes = [Titulo]()
     
-    var prog1 = Evento(dia:"Segunda", hora:"19", data:"2010-09-20")
-    var prog2 = Evento(dia:"Terca", hora:"15", data:"2010-09-21")
-    var prog3 = Evento(dia:"Quarta", hora:"13", data:"2010-09-22")
-    var prog4 = Evento(dia:"Quinta", hora:"17", data:"2010-09-23")
-    var prog5 = Evento(dia:"Sexta", hora:"20", data:"2010-09-24")
-    
-    var listProg = [Evento]()
-    
-    //var f1 = Titulo("Harry Potter", "HP", 1.0, "f","Filme de uma franquia que começou bem, mas ficou uma bosta", )
+    let prog1 = Evento(dia:"Segunda", hora:"19", data:"2010-09-20")
+    let prog2 = Evento(dia:"Terca", hora:"15", data:"2010-09-21")
+    let prog3 = Evento(dia:"Quarta", hora:"13", data:"2010-09-22")
+    let prog4 = Evento(dia:"Quinta", hora:"17", data:"2010-09-23")
+    let prog5 = Evento(dia:"Sexta", hora:"20", data:"2010-09-24")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        var listProg = [Evento]()
+        listProg.append(prog1)
+        listProg.append(prog2)
+        
+        let f1 = Titulo(nome:"Harry Potter",genero: "Bosta", imagem:"HP", nota:1.0, tipo:"f",sinopse:"Filme de uma franquia que começou bem, mas ficou uma bosta", programacao:listProg)
+        
+        filmes.append(f1)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -41,23 +44,26 @@ class ListaFilmesTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return filmes.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Titulo", forIndexPath: indexPath) as! TituloTableViewCell
 
-        // Configure the cell...
-
+        cell.TituloLabel.text = self.filmes[indexPath.row].nome
+        cell.generoLabel.text = self.filmes[indexPath.row].genero
+        cell.notaLabel.text = String(self.filmes[indexPath.row].nota)
+        cell.imageView!.image = UIImage(named:self.filmes[indexPath.row].imagem!)
+        
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
