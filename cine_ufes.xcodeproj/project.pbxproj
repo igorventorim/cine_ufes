@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0520D01E081721005E9CAC /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0520CF1E081721005E9CAC /* PlayersViewController.swift */; };
 		3FBEE1C21E07F3BF00C42514 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBEE1C11E07F3BF00C42514 /* AppDelegate.swift */; };
 		3FBEE1C41E07F3BF00C42514 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBEE1C31E07F3BF00C42514 /* ViewController.swift */; };
 		3FBEE1C71E07F3BF00C42514 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBEE1C51E07F3BF00C42514 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F0520CF1E081721005E9CAC /* PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		3FBEE1BE1E07F3BF00C42514 /* cine_ufes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cine_ufes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBEE1C11E07F3BF00C42514 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FBEE1C31E07F3BF00C42514 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				3FBEE1C11E07F3BF00C42514 /* AppDelegate.swift */,
 				3FBEE1C31E07F3BF00C42514 /* ViewController.swift */,
 				3FBEE1C51E07F3BF00C42514 /* Main.storyboard */,
+				3F0520CF1E081721005E9CAC /* PlayersViewController.swift */,
 				3FBEE1CB1E07F3BF00C42514 /* Assets.xcassets */,
 				3FBEE1CD1E07F3BF00C42514 /* LaunchScreen.storyboard */,
 				3FBEE1D01E07F3BF00C42514 /* Info.plist */,
@@ -182,6 +185,7 @@
 				3FBEE1C41E07F3BF00C42514 /* ViewController.swift in Sources */,
 				3FBEE1C21E07F3BF00C42514 /* AppDelegate.swift in Sources */,
 				3FDEED8E1E08087C006ACF51 /* Evento.swift in Sources */,
+				3F0520D01E081721005E9CAC /* PlayersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
