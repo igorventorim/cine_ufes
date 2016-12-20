@@ -1,16 +1,17 @@
 //
-//  ListaFilmesTableViewController.swift
+//  ListaTeatroTableViewController.swift
 //  cine_ufes
 //
-//  Created by Student on 12/19/16.
+//  Created by Student on 12/20/16.
 //  Copyright © 2016 ufes.br. All rights reserved.
 //
 
 import UIKit
 
-class ListaFilmesTableViewController: UITableViewController {
+class ListaTeatroTableViewController: UITableViewController {
 
-    var filmes = [Titulo]()
+    
+    var teatro = [Titulo]()
     
     let prog1 = Evento(dia:"Segunda", hora:"19", data:"2010-09-20")
     let prog2 = Evento(dia:"Terca", hora:"15", data:"2010-09-21")
@@ -22,52 +23,48 @@ class ListaFilmesTableViewController: UITableViewController {
         super.viewDidLoad()
         
         var listProg = [Evento]()
-        listProg.append(prog1)
         listProg.append(prog2)
+        listProg.append(prog3)
         
-        let f1 = Titulo(nome:"Harry Potter",genero: "Bosta", imagem:"HP", nota:1.0, tipo:"f",sinopse:"Filme de uma franquia que começou bem, mas ficou uma bosta", programacao:listProg)
+        let f1 = Titulo(nome:"Billie e Mandy",genero: "Animacao", imagem:"BM", nota:1.0, tipo:"t",sinopse:"Duas crianças que encontram um ceifador...", programacao:listProg)
         
-        filmes.append(f1)
+        teatro.append(f1)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return filmes.count
+        return teatro.count
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Titulo", forIndexPath: indexPath) as! TituloTableViewCell
-
-        cell.tituloLabel.text = self.filmes[indexPath.row].nome
-        cell.generoLabel.text = self.filmes[indexPath.row].genero
-        cell.notaLabel.text = String(self.filmes[indexPath.row].nota)
         
-        
-        
-        cell.imageView!.image = UIImage(named:self.filmes[indexPath.row].imagem!)
+        cell.tituloLabel.text = self.teatro[indexPath.row].nome
+        cell.generoLabel.text = self.teatro[indexPath.row].genero
+        cell.notaLabel.text = String(self.teatro[indexPath.row].nota)
+        cell.imageView!.image = UIImage(named:self.teatro[indexPath.row].imagem!)
         
         return cell
     }
- 
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
