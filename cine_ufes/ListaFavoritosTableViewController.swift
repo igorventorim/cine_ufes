@@ -55,12 +55,12 @@ class ListaFavoritosTableViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Titulo", forIndexPath: indexPath) as! TituloTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Titulo", forIndexPath: indexPath) as! FavoritosTableViewCell
         
         cell.tituloLabel.text = self.favoritos[indexPath.row].nome
         cell.generoLabel.text = self.favoritos[indexPath.row].genero
         cell.notaLabel.text = String(self.favoritos[indexPath.row].nota)
-        cell.imageView!.image = UIImage(named:self.favoritos[indexPath.row].imagem!)
+        cell.imagemView!.image = UIImage(named:self.favoritos[indexPath.row].imagem!)
         
         return cell
     }

@@ -54,7 +54,7 @@ class ListaFilmesTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Titulo", forIndexPath: indexPath) as! TituloTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Titulo", forIndexPath: indexPath) as! FilmesTableViewCell
 
         cell.tituloLabel.text = self.filmes[indexPath.row].nome
         cell.generoLabel.text = self.filmes[indexPath.row].genero
@@ -62,7 +62,7 @@ class ListaFilmesTableViewController: UITableViewController {
         
         
         
-        cell.imageView!.image = UIImage(named:self.filmes[indexPath.row].imagem!)
+        cell.imagemView!.image = UIImage(named:self.filmes[indexPath.row].imagem!)
         
         return cell
     }

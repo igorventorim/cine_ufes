@@ -55,12 +55,12 @@ class ListaTeatroTableViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Titulo", forIndexPath: indexPath) as! TituloTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Titulo", forIndexPath: indexPath) as! TeatroTableViewCell
         
         cell.tituloLabel.text = self.teatro[indexPath.row].nome
         cell.generoLabel.text = self.teatro[indexPath.row].genero
         cell.notaLabel.text = String(self.teatro[indexPath.row].nota)
-        cell.imageView!.image = UIImage(named:self.teatro[indexPath.row].imagem!)
+        cell.imagemView!.image = UIImage(named:self.teatro[indexPath.row].imagem!)
         
         return cell
     }

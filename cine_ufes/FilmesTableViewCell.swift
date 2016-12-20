@@ -1,21 +1,21 @@
 //
-//  TituloTableViewCell.swift
+//  FilmesTableViewCell.swift
 //  cine_ufes
 //
-//  Created by Student on 12/19/16.
+//  Created by Student on 12/20/16.
 //  Copyright © 2016 ufes.br. All rights reserved.
 //
 
 import UIKit
 
-class TituloTableViewCell: UITableViewCell {
+class FilmesTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var TituloLabel: UILabel!
-    
+    @IBOutlet weak var tituloLabel: UILabel!
+
     @IBOutlet weak var generoLabel: UILabel!
     
     @IBOutlet weak var notaLabel: UILabel!
-
+    
     @IBOutlet weak var imagemView: UIImageView!
     
     override func awakeFromNib() {
