@@ -142,7 +142,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                        <variation key="widthClass=compact" misplaced="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="180" height="21"/>
                                         </variation>
                                     </label>
@@ -152,12 +152,12 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                        <variation key="widthClass=compact" misplaced="YES">
                                             <rect key="frame" x="180" y="0.0" width="180" height="21"/>
                                         </variation>
                                     </label>
                                 </subviews>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="20" y="456" width="360" height="21"/>
                                 </variation>
                             </stackView>
@@ -181,14 +181,11 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4is-lg-8Hb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4is-lg-8Hb">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="28" y="338" width="344" height="21"/>
-                                </variation>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="42" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KbH-Z8-ONP">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -209,7 +206,7 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
-                                                            <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                            <variation key="widthClass=compact" misplaced="YES">
                                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="21"/>
                                                             </variation>
                                                         </label>
@@ -218,12 +215,12 @@
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
-                                                            <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                            <variation key="widthClass=compact" misplaced="YES">
                                                                 <rect key="frame" x="172" y="0.0" width="172" height="21"/>
                                                             </variation>
                                                         </label>
                                                     </subviews>
-                                                    <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <variation key="widthClass=compact" misplaced="YES">
                                                         <rect key="frame" x="8" y="15" width="344" height="21"/>
                                                     </variation>
                                                 </stackView>
@@ -231,23 +228,26 @@
                                             <constraints>
                                                 <constraint firstItem="bGJ-UA-Qlm" firstAttribute="leading" secondItem="EYv-Cd-5uH" secondAttribute="leadingMargin" id="Aeu-BN-E3F"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="bGJ-UA-Qlm" secondAttribute="trailing" id="q2v-Ix-DRk"/>
+                                                <constraint firstItem="bGJ-UA-Qlm" firstAttribute="top" secondItem="EYv-Cd-5uH" secondAttribute="topMargin" constant="7" id="y4E-r4-gjR"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
                                                     <exclude reference="Aeu-BN-E3F"/>
                                                     <exclude reference="q2v-Ix-DRk"/>
+                                                    <exclude reference="y4E-r4-gjR"/>
                                                 </mask>
                                             </variation>
                                             <variation key="widthClass=compact">
                                                 <mask key="constraints">
                                                     <include reference="Aeu-BN-E3F"/>
                                                     <include reference="q2v-Ix-DRk"/>
+                                                    <include reference="y4E-r4-gjR"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" fixedFrame="YES">
+                                <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="20" y="485" width="360" height="115"/>
                                 </variation>
                             </tableView>
@@ -290,11 +290,8 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="75" y="275" width="250" height="50"/>
-                                </variation>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QS-ZZ-jZc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QS-ZZ-jZc">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -306,12 +303,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="KbH-Z8-ONP" firstAttribute="top" secondItem="YO6-NF-y9e" secondAttribute="bottom" constant="8" symbolic="YES" id="1Td-Dv-Lre"/>
+                            <constraint firstItem="quT-Dr-B5N" firstAttribute="centerY" secondItem="jYL-Lr-Vhz" secondAttribute="centerY" id="4wJ-8T-kPQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Qr-6s-jQP" secondAttribute="trailing" constant="-3" id="8Qw-7K-qwS"/>
+                            <constraint firstItem="YO6-NF-y9e" firstAttribute="leading" secondItem="KbH-Z8-ONP" secondAttribute="leading" id="99j-qB-4Eh"/>
                             <constraint firstItem="YO6-NF-y9e" firstAttribute="top" secondItem="4is-lg-8Hb" secondAttribute="bottom" constant="4" id="InB-Yh-gfg"/>
                             <constraint firstItem="0Qr-6s-jQP" firstAttribute="top" secondItem="pLE-He-JL3" secondAttribute="bottom" constant="8" id="KcW-cX-eVF"/>
                             <constraint firstItem="0Qr-6s-jQP" firstAttribute="leading" secondItem="jYL-Lr-Vhz" secondAttribute="leadingMargin" constant="2" id="NhW-hH-Vr8"/>
+                            <constraint firstItem="4is-lg-8Hb" firstAttribute="top" secondItem="quT-Dr-B5N" secondAttribute="bottom" constant="13" id="Rx0-Eq-0sN"/>
                             <constraint firstItem="4is-lg-8Hb" firstAttribute="leading" secondItem="jYL-Lr-Vhz" secondAttribute="leadingMargin" constant="8" id="T8C-Gm-jcn"/>
                             <constraint firstItem="5QS-ZZ-jZc" firstAttribute="leading" secondItem="jYL-Lr-Vhz" secondAttribute="leadingMargin" id="XhH-KD-h5R"/>
+                            <constraint firstItem="quT-Dr-B5N" firstAttribute="centerX" secondItem="4is-lg-8Hb" secondAttribute="centerX" id="Xnu-rS-45e"/>
+                            <constraint firstItem="YO6-NF-y9e" firstAttribute="trailing" secondItem="KbH-Z8-ONP" secondAttribute="trailing" id="fTu-JJ-5kC"/>
+                            <constraint firstAttribute="bottom" secondItem="KbH-Z8-ONP" secondAttribute="bottom" id="g3k-cH-PLt"/>
                             <constraint firstItem="5QS-ZZ-jZc" firstAttribute="top" secondItem="0Qr-6s-jQP" secondAttribute="bottom" constant="8" id="hVW-OV-VbJ"/>
                             <constraint firstItem="5QS-ZZ-jZc" firstAttribute="trailing" secondItem="jYL-Lr-Vhz" secondAttribute="trailingMargin" id="hwn-YK-7Yj"/>
                             <constraint firstItem="YO6-NF-y9e" firstAttribute="leading" secondItem="jYL-Lr-Vhz" secondAttribute="leadingMargin" id="tuR-U9-Fyd"/>
@@ -327,17 +331,24 @@
                                 <exclude reference="5QS-ZZ-jZc"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="T8C-Gm-jcn"/>
-                                <exclude reference="vqh-dX-gNB"/>
-                                <exclude reference="XhH-KD-h5R"/>
-                                <exclude reference="hVW-OV-VbJ"/>
-                                <exclude reference="hwn-YK-7Yj"/>
                                 <exclude reference="8Qw-7K-qwS"/>
                                 <exclude reference="KcW-cX-eVF"/>
                                 <exclude reference="NhW-hH-Vr8"/>
+                                <exclude reference="XhH-KD-h5R"/>
+                                <exclude reference="hVW-OV-VbJ"/>
+                                <exclude reference="hwn-YK-7Yj"/>
+                                <exclude reference="4wJ-8T-kPQ"/>
+                                <exclude reference="Xnu-rS-45e"/>
+                                <exclude reference="Rx0-Eq-0sN"/>
+                                <exclude reference="T8C-Gm-jcn"/>
+                                <exclude reference="vqh-dX-gNB"/>
+                                <exclude reference="99j-qB-4Eh"/>
                                 <exclude reference="InB-Yh-gfg"/>
+                                <exclude reference="fTu-JJ-5kC"/>
                                 <exclude reference="tuR-U9-Fyd"/>
                                 <exclude reference="vyX-ic-H4F"/>
+                                <exclude reference="1Td-Dv-Lre"/>
+                                <exclude reference="g3k-cH-PLt"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -349,17 +360,24 @@
                                 <include reference="5QS-ZZ-jZc"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="T8C-Gm-jcn"/>
-                                <include reference="vqh-dX-gNB"/>
-                                <include reference="XhH-KD-h5R"/>
-                                <include reference="hVW-OV-VbJ"/>
-                                <include reference="hwn-YK-7Yj"/>
                                 <include reference="8Qw-7K-qwS"/>
                                 <include reference="KcW-cX-eVF"/>
                                 <include reference="NhW-hH-Vr8"/>
+                                <include reference="XhH-KD-h5R"/>
+                                <include reference="hVW-OV-VbJ"/>
+                                <include reference="hwn-YK-7Yj"/>
+                                <include reference="4wJ-8T-kPQ"/>
+                                <include reference="Xnu-rS-45e"/>
+                                <include reference="Rx0-Eq-0sN"/>
+                                <include reference="T8C-Gm-jcn"/>
+                                <include reference="vqh-dX-gNB"/>
+                                <include reference="99j-qB-4Eh"/>
                                 <include reference="InB-Yh-gfg"/>
+                                <include reference="fTu-JJ-5kC"/>
                                 <include reference="tuR-U9-Fyd"/>
                                 <include reference="vyX-ic-H4F"/>
+                                <include reference="1Td-Dv-Lre"/>
+                                <include reference="g3k-cH-PLt"/>
                             </mask>
                         </variation>
                     </view>
