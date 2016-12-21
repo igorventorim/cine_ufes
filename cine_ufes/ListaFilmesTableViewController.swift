@@ -21,6 +21,8 @@ class ListaFilmesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getFilmes()
+        
         var listProg = [Evento]()
 //        listProg.append(prog1)
 //        listProg.append(prog2)
@@ -61,8 +63,14 @@ class ListaFilmesTableViewController: UITableViewController {
         cell.notaLabel.text = String(self.filmes[indexPath.row].nota)
         
         
+        if let url = NSURL(string:self.filmes[indexPath.row].imagem!) {
+            
+            if let data = NSData(contentsOfURL: url){
+                
+                cell.imagemView.image = UIImage(data:data)
+            }
+        }
         
-        cell.imagemView!.image = UIImage(named:self.filmes[indexPath.row].imagem!)
         
         return cell
     }
@@ -103,14 +111,88 @@ class ListaFilmesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "myId" {
+            if let filmesVC = segue.destinationViewController as? FilmesViewController {
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let filmeSelecionado = filmes[indexPath.row]
+                    
+                    filmesVC.titulo = filmeSelecionado
+                }
+            }
+        }
+        
     }
-    */
+    
+    func getFilmes()
+    {
+        let scriptUrl = "http://minhaopiniao.pe.hu/cine_ufes_service.php"
+        let urlWithParams = scriptUrl + "?action=getTitulos"
+        let myUrl = NSURL(string: urlWithParams);
+        let request = NSMutableURLRequest(URL:myUrl!);
+        
+        request.HTTPMethod = "GET"
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request)
+        {
+            
+            data, response, error in
+            
+            // Check for error
+            if error != nil
+            {
+                print("error=\(error)")
+                return
+            }
+            // Print out response string
+            
+            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            print("responseString = \(responseString)")
+            
+            
+            // Convert server json response to NSDictionary
+            do {
+                
+                if let convertedJsonIntoArray:NSArray = try NSJSONSerialization.JSONObjectWithData(data!,options: NSJSONReadingOptions.AllowFragments) as? NSArray{
+                    
+                    for json in convertedJsonIntoArray
+                    {
+                        var titulo = Titulo()
+                        
+                        if let nome = json["nome"] as? String {titulo.nome = nome}
+                        
+                        if let genero = json["genero"] as? String {titulo.genero = genero}
+                        
+                        if let id = json["_ID"] as? String{ titulo.idTitulo = Int(id)!}
+                        
+                        if let img = json["imagem"] as? String{ titulo.imagem = img}
+                        
+                        if let nota = json["nota"] as? String{ titulo.nota = Double(nota)}
+                        
+                        if let tipo = json["tipo"] as? String{ titulo.tipo = Character(tipo)}
+                        
+                        if let sinopse = json["sinopse"] as? String{ titulo.sinopse = sinopse }
+                        
+                        self.filmes.append(titulo)
+                    }
+                    
+                    self.tableView.reloadData()
+                }
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+            
+        }
+        
+        task.resume()
+    }
+ 
 
 }
