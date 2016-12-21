@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="592.5" y="-550"/>
         </scene>
-        <!--View Controller-->
+        <!--Filmes View Controller-->
         <scene sceneID="YHM-jz-0FT">
             <objects>
-                <viewController id="8zT-ZF-ine" sceneMemberID="viewController">
+                <viewController id="8zT-ZF-ine" customClass="FilmesViewController" customModule="cine_ufes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pLE-He-JL3"/>
                         <viewControllerLayoutGuide type="bottom" id="NmV-JF-eHW"/>
@@ -173,7 +173,8 @@
                                         <exclude reference="Lnw-7H-UYx"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="22" y="28" width="361" height="213"/>
                                     <mask key="constraints">
                                         <exclude reference="Ktu-Di-RXH"/>
                                         <include reference="Lnw-7H-UYx"/>
@@ -188,12 +189,6 @@
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="28" y="338" width="344" height="21"/>
                                 </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QS-ZZ-jZc">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="42" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KbH-Z8-ONP">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -299,6 +294,15 @@
                                     <rect key="frame" x="75" y="275" width="250" height="50"/>
                                 </variation>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5QS-ZZ-jZc">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="28" y="249" width="360" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -318,9 +322,9 @@
                             <mask key="subviews">
                                 <exclude reference="0Qr-6s-jQP"/>
                                 <exclude reference="4is-lg-8Hb"/>
-                                <exclude reference="5QS-ZZ-jZc"/>
                                 <exclude reference="KbH-Z8-ONP"/>
                                 <exclude reference="quT-Dr-B5N"/>
+                                <exclude reference="5QS-ZZ-jZc"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="T8C-Gm-jcn"/>
@@ -340,9 +344,9 @@
                             <mask key="subviews">
                                 <include reference="0Qr-6s-jQP"/>
                                 <include reference="4is-lg-8Hb"/>
-                                <include reference="5QS-ZZ-jZc"/>
                                 <include reference="KbH-Z8-ONP"/>
                                 <include reference="quT-Dr-B5N"/>
+                                <include reference="5QS-ZZ-jZc"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="T8C-Gm-jcn"/>
@@ -359,6 +363,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="imagemView" destination="0Qr-6s-jQP" id="g33-kT-tcE"/>
+                        <outlet property="sinopseLabel" destination="4is-lg-8Hb" id="lSR-qp-a2f"/>
+                        <outlet property="tituloLabel" destination="5QS-ZZ-jZc" id="3J4-rQ-euE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w85-rQ-DwO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

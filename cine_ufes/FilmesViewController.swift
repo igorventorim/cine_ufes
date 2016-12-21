@@ -10,16 +10,17 @@ import UIKit
 
 class FilmesViewController: UIViewController {
     
-    @IBOutlet weak var sinopseLabel: UILabel!
     @IBOutlet weak var imagemView: UIImageView!
-    @IBOutlet weak var TituleLabel: UILabel!
-    
+
+    @IBOutlet weak var tituloLabel: UILabel!
     var titulo: Titulo?
+    
+    @IBOutlet weak var sinopseLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        TituleLabel.text = titulo?.nome
+        tituloLabel.text = titulo?.nome
         sinopseLabel.text = titulo?.sinopse
         if let url = NSURL(string:(titulo?.imagem)!) {
             
