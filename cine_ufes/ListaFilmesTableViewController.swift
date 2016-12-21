@@ -23,6 +23,7 @@ class ListaFilmesTableViewController: UITableViewController {
         
         getFilmes()
         
+
         var listProg = [Evento]()
 //        listProg.append(prog1)
 //        listProg.append(prog2)
@@ -60,7 +61,7 @@ class ListaFilmesTableViewController: UITableViewController {
 
         cell.tituloLabel.text = self.filmes[indexPath.row].nome
         cell.generoLabel.text = self.filmes[indexPath.row].genero
-        cell.notaLabel.text = String(self.filmes[indexPath.row].nota)
+        cell.notaLabel.text = String(self.filmes[indexPath.row].nota!)
         
         
         if let url = NSURL(string:self.filmes[indexPath.row].imagem!) {
@@ -176,11 +177,15 @@ class ListaFilmesTableViewController: UITableViewController {
                         
                         if let nota = json["nota"] as? String{ titulo.nota = Double(nota)}
                         
-                        if let tipo = json["tipo"] as? String{ titulo.tipo = Character(tipo)}
-                        
                         if let sinopse = json["sinopse"] as? String{ titulo.sinopse = sinopse }
                         
-                        self.filmes.append(titulo)
+                        if let tipo = json["tipo"] as? String{ titulo.tipo = Character(tipo)}
+
+                        if(titulo.tipo == "f")
+                        {
+                            self.filmes.append(titulo)
+                        }
+                        
                     }
                     
                     self.tableView.reloadData()
@@ -193,6 +198,5 @@ class ListaFilmesTableViewController: UITableViewController {
         
         task.resume()
     }
- 
 
 }

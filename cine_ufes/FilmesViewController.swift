@@ -69,13 +69,12 @@ class FilmesViewController: UIViewController, UITableViewDataSource{
     }
     */
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("list", forIndexPath: indexPath) as! ProgramacaoCellTableViewCell
         
         cell.diaLabel.text = self.listEvent[indexPath.row].dia
-        cell.horarioLabel.text = self.listEvent[indexPath.row].dia
+        cell.horarioLabel.text = self.listEvent[indexPath.row].hora
         
-    
         return cell
     }
     
@@ -131,7 +130,8 @@ class FilmesViewController: UIViewController, UITableViewDataSource{
                     print(convertedJsonIntoArray)
                     
                     
-                
+                    self.programacaoTableView.reloadData()
+                    
                     
                 }
             } catch let error as NSError {

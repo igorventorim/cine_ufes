@@ -507,6 +507,7 @@
                                     <outlet property="imagemView" destination="BU5-uq-zHk" id="2NQ-DD-Dmk"/>
                                     <outlet property="notaLabel" destination="q5B-y1-ZSB" id="1b8-Cl-U7t"/>
                                     <outlet property="tituloLabel" destination="a1L-4n-8jF" id="8h4-hu-I79"/>
+                                    <segue destination="8zT-ZF-ine" kind="show" identifier="myId" id="eZZ-gA-Bwe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -699,4 +700,7 @@
         <image name="estrelinha-4" width="800" height="800"/>
         <image name="estrelinha-5" width="800" height="800"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="eZZ-gA-Bwe"/>
+    </inferredMetricsTieBreakers>
 </document>

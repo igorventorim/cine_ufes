@@ -12,28 +12,10 @@ class ListaTeatroTableViewController: UITableViewController {
 
     
     var teatro = [Titulo]()
-//    
-//    let prog1 = Evento(dia:"Segunda", hora:"19", data:"2010-09-20")
-//    let prog2 = Evento(dia:"Terca", hora:"15", data:"2010-09-21")
-//    let prog3 = Evento(dia:"Quarta", hora:"13", data:"2010-09-22")
-//    let prog4 = Evento(dia:"Quinta", hora:"17", data:"2010-09-23")
-//    let prog5 = Evento(dia:"Sexta", hora:"20", data:"2010-09-24")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var listProg = [Evento]()
-//        listProg.append(prog2)
-//        listProg.append(prog3)
-//        
-//        let f1 = Titulo(nome:"Billie e Mandy",genero: "Animacao", imagem:"BM", nota:1.0, tipo:"t",sinopse:"Duas crianças que encontram um ceifador...", programacao:listProg)
-//        
-//        teatro.append(f1)
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.getTeatro()
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,55 +41,101 @@ class ListaTeatroTableViewController: UITableViewController {
         
         cell.tituloLabel.text = self.teatro[indexPath.row].nome
         cell.generoLabel.text = self.teatro[indexPath.row].genero
-        cell.notaLabel.text = String(self.teatro[indexPath.row].nota)
-        cell.imagemView!.image = UIImage(named:self.teatro[indexPath.row].imagem!)
+        cell.notaLabel.text = String(self.teatro[indexPath.row].nota!)
+        
+        if let url = NSURL(string:self.teatro[indexPath.row].imagem!) {
+            
+            if let data = NSData(contentsOfURL: url){
+                
+                cell.imagemView.image = UIImage(data:data)
+            }
+        }
         
         return cell
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "myId" {
+            if let teatroVC = segue.destinationViewController as? FilmesViewController {
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let teatroSelecionado = teatro[indexPath.row]
+                    
+                    teatroVC.titulo = teatroSelecionado
+                }
+            }
+        }
+        
     }
-    */
-
+    
+  
+    func getTeatro()
+    {
+        let scriptUrl = "http://minhaopiniao.pe.hu/cine_ufes_service.php"
+        let urlWithParams = scriptUrl + "?action=getTitulos"
+        let myUrl = NSURL(string: urlWithParams);
+        let request = NSMutableURLRequest(URL:myUrl!);
+        
+        request.HTTPMethod = "GET"
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request)
+        {
+            
+            data, response, error in
+            
+            // Check for error
+            if error != nil
+            {
+                print("error=\(error)")
+                return
+            }
+            // Print out response string
+            
+            let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
+            print("responseString = \(responseString)")
+            
+            
+            // Convert server json response to NSDictionary
+            do {
+                
+                if let convertedJsonIntoArray:NSArray = try NSJSONSerialization.JSONObjectWithData(data!,options: NSJSONReadingOptions.AllowFragments) as? NSArray{
+                    
+                    for json in convertedJsonIntoArray
+                    {
+                        var titulo = Titulo()
+                        
+                        if let nome = json["nome"] as? String {titulo.nome = nome}
+                        
+                        if let genero = json["genero"] as? String {titulo.genero = genero}
+                        
+                        if let id = json["_ID"] as? String{ titulo.idTitulo = Int(id)!}
+                        
+                        if let img = json["imagem"] as? String{ titulo.imagem = img}
+                        
+                        if let nota = json["nota"] as? String{ titulo.nota = Double(nota)}
+                        
+                        if let sinopse = json["sinopse"] as? String{ titulo.sinopse = sinopse }
+                        
+                        if let tipo = json["tipo"] as? String{ titulo.tipo = Character(tipo)}
+                        
+                        if(titulo.tipo == "t")
+                        {
+                            self.teatro.append(titulo)
+                        }
+                        
+                    }
+                    
+                    self.tableView.reloadData()
+                }
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+            
+        }
+        
+        task.resume()
+    }
+    
 }
