@@ -75,6 +75,13 @@ class FilmesViewController: UIViewController, UITableViewDataSource{
         cell.diaLabel.text = self.listEvent[indexPath.row].dia
         cell.horarioLabel.text = self.listEvent[indexPath.row].hora
         
+        cell.layer.borderWidth = 0.5
+        cell.layer.cornerRadius = 1
+        
+        cell.layer.borderColor = UIColor.whiteColor().CGColor
+        cell.clipsToBounds = true
+        
+        
         return cell
     }
     
@@ -113,7 +120,7 @@ class FilmesViewController: UIViewController, UITableViewDataSource{
                     
                     for json in convertedJsonIntoArray
                     {
-                        var evento = Evento()
+                        let evento = Evento()
                         if let id = json ["_ID"] as? Int{  evento.id = Int(id) }
                         
                         if let data = json ["data"] as? String{ evento.data = NSDate(dateString: data) }

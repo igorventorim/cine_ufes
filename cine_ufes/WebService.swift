@@ -116,7 +116,7 @@ class WebService
                     
                     for json in convertedJsonIntoArray
                     {
-                        var evento = Evento()
+                        let evento = Evento()
                         if let id = json ["_ID"] as? Int{  evento.id = Int(id) }
                         
                         if let data = json ["data"] as? String{ evento.data = NSDate(dateString: data) }

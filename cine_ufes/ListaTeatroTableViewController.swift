@@ -51,6 +51,13 @@ class ListaTeatroTableViewController: UITableViewController {
             }
         }
         
+        cell.layer.borderWidth = 1.5
+        cell.layer.cornerRadius = 1
+        
+        cell.layer.borderColor = UIColor.whiteColor().CGColor
+        cell.clipsToBounds = true
+        
+        
         return cell
     }
     
@@ -104,7 +111,7 @@ class ListaTeatroTableViewController: UITableViewController {
                     
                     for json in convertedJsonIntoArray
                     {
-                        var titulo = Titulo()
+                        let titulo = Titulo()
                         
                         if let nome = json["nome"] as? String {titulo.nome = nome}
                         
