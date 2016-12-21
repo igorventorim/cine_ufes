@@ -20,6 +20,7 @@
 		3FBEE1CA1E07F3BF00C42514 /* cine_ufes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FBEE1C81E07F3BF00C42514 /* cine_ufes.xcdatamodeld */; };
 		3FBEE1CC1E07F3BF00C42514 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBEE1CB1E07F3BF00C42514 /* Assets.xcassets */; };
 		3FBEE1CF1E07F3BF00C42514 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBEE1CD1E07F3BF00C42514 /* LaunchScreen.storyboard */; };
+		3FD428541E0A9C4C00940D6E /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD428531E0A9C4C00940D6E /* WebService.swift */; };
 		3FDEED8A1E08085F006ACF51 /* Titulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEED891E08085F006ACF51 /* Titulo.swift */; };
 		3FDEED8E1E08087C006ACF51 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEED8D1E08087C006ACF51 /* Evento.swift */; };
 /* End PBXBuildFile section */
@@ -39,6 +40,7 @@
 		3FBEE1CB1E07F3BF00C42514 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FBEE1CE1E07F3BF00C42514 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FBEE1D01E07F3BF00C42514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FD428531E0A9C4C00940D6E /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		3FDEED891E08085F006ACF51 /* Titulo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Titulo.swift; sourceTree = "<group>"; };
 		3FDEED8D1E08087C006ACF51 /* Evento.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 		3FDEED8F1E081120006ACF51 /* ListaFilmesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaFilmesTableViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				3FDEED891E08085F006ACF51 /* Titulo.swift */,
 				3FDEED8D1E08087C006ACF51 /* Evento.swift */,
+				3FD428531E0A9C4C00940D6E /* WebService.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD428541E0A9C4C00940D6E /* WebService.swift in Sources */,
 				3FDEED8A1E08085F006ACF51 /* Titulo.swift in Sources */,
 				3FBEE1CA1E07F3BF00C42514 /* cine_ufes.xcdatamodeld in Sources */,
 				3FBCF03A1E09487200299E2A /* ListaFilmesTableViewController.swift in Sources */,

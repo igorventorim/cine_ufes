@@ -255,7 +255,7 @@
                                     <rect key="frame" x="20" y="485" width="360" height="115"/>
                                 </variation>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="quT-Dr-B5N">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="quT-Dr-B5N">
                                 <rect key="frame" x="20" y="186" width="250" height="50"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="estrelinha-1" translatesAutoresizingMaskIntoConstraints="NO" id="r2u-NL-xI8">

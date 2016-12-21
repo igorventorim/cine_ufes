@@ -11,23 +11,23 @@ import UIKit
 class ListaFilmesTableViewController: UITableViewController {
 
     var filmes = [Titulo]()
-    
-    let prog1 = Evento(dia:"Segunda", hora:"19", data:"2010-09-20")
-    let prog2 = Evento(dia:"Terca", hora:"15", data:"2010-09-21")
-    let prog3 = Evento(dia:"Quarta", hora:"13", data:"2010-09-22")
-    let prog4 = Evento(dia:"Quinta", hora:"17", data:"2010-09-23")
-    let prog5 = Evento(dia:"Sexta", hora:"20", data:"2010-09-24")
+//    
+//    let prog1 = Evento(dia:"Segunda", hora:"19", data:"2010-09-20")
+//    let prog2 = Evento(dia:"Terca", hora:"15", data:"2010-09-21")
+//    let prog3 = Evento(dia:"Quarta", hora:"13", data:"2010-09-22")
+//    let prog4 = Evento(dia:"Quinta", hora:"17", data:"2010-09-23")
+//    let prog5 = Evento(dia:"Sexta", hora:"20", data:"2010-09-24")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         var listProg = [Evento]()
-        listProg.append(prog1)
-        listProg.append(prog2)
+//        listProg.append(prog1)
+//        listProg.append(prog2)
         
-        let f1 = Titulo(nome:"Harry Potter",genero: "Bosta", imagem:"HP", nota:1.0, tipo:"f",sinopse:"Filme de uma franquia que começou bem, mas ficou uma bosta", programacao:listProg)
+//        let f1 = Titulo(nome:"Harry Potter",genero: "Bosta", imagem:"HP", nota:1.0, tipo:"f",sinopse:"Filme de uma franquia que começou bem, mas ficou uma bosta", programacao:listProg)
         
-        filmes.append(f1)
+//        filmes.append(f1)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
