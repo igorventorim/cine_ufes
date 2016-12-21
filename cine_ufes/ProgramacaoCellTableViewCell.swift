@@ -10,6 +10,9 @@ import UIKit
 
 class ProgramacaoCellTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var horarioLabel: UILabel!
+    @IBOutlet weak var diaLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

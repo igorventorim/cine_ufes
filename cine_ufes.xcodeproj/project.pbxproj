@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3F0520D01E081721005E9CAC /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0520CF1E081721005E9CAC /* PlayersViewController.swift */; };
 		3F34501A1E0AA54B00434193 /* FilmesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3450191E0AA54B00434193 /* FilmesViewController.swift */; };
-		3F34501C1E0AAAAB00434193 /* ProgramacaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34501B1E0AAAAB00434193 /* ProgramacaoTableViewController.swift */; };
 		3F3450201E0AB14400434193 /* ProgramacaoCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34501F1E0AB14400434193 /* ProgramacaoCellTableViewCell.swift */; };
 		3FBCF03A1E09487200299E2A /* ListaFilmesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDEED8F1E081120006ACF51 /* ListaFilmesTableViewController.swift */; };
 		3FBCF03C1E094A3900299E2A /* ListaTeatroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCF03B1E094A3900299E2A /* ListaTeatroTableViewController.swift */; };
@@ -31,7 +30,6 @@
 /* Begin PBXFileReference section */
 		3F0520CF1E081721005E9CAC /* PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		3F3450191E0AA54B00434193 /* FilmesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilmesViewController.swift; sourceTree = "<group>"; };
-		3F34501B1E0AAAAB00434193 /* ProgramacaoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramacaoTableViewController.swift; sourceTree = "<group>"; };
 		3F34501F1E0AB14400434193 /* ProgramacaoCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramacaoCellTableViewCell.swift; sourceTree = "<group>"; };
 		3FBCF03B1E094A3900299E2A /* ListaTeatroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaTeatroTableViewController.swift; sourceTree = "<group>"; };
 		3FBCF03D1E094AB100299E2A /* ListaFavoritosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaFavoritosTableViewController.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 		3FDEED881E08083B006ACF51 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3F34501B1E0AAAAB00434193 /* ProgramacaoTableViewController.swift */,
 				3F3450191E0AA54B00434193 /* FilmesViewController.swift */,
 				3FDEED8F1E081120006ACF51 /* ListaFilmesTableViewController.swift */,
 				3FBCF03B1E094A3900299E2A /* ListaTeatroTableViewController.swift */,
@@ -221,7 +218,6 @@
 				3FD428541E0A9C4C00940D6E /* WebService.swift in Sources */,
 				3FDEED8A1E08085F006ACF51 /* Titulo.swift in Sources */,
 				3FBEE1CA1E07F3BF00C42514 /* cine_ufes.xcdatamodeld in Sources */,
-				3F34501C1E0AAAAB00434193 /* ProgramacaoTableViewController.swift in Sources */,
 				3FBCF03A1E09487200299E2A /* ListaFilmesTableViewController.swift in Sources */,
 				3F34501A1E0AA54B00434193 /* FilmesViewController.swift in Sources */,
 				3FBEE1C41E07F3BF00C42514 /* ViewController.swift in Sources */,

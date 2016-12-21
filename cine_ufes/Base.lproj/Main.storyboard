@@ -173,8 +173,7 @@
                                         <exclude reference="Lnw-7H-UYx"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="22" y="28" width="361" height="213"/>
+                                <variation key="widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="Ktu-Di-RXH"/>
                                         <include reference="Lnw-7H-UYx"/>
@@ -191,7 +190,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="42" id="PfR-A0-W70">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="list" rowHeight="42" id="PfR-A0-W70" customClass="ProgramacaoCellTableViewCell" customModule="cine_ufes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PfR-A0-W70" id="EYv-Cd-5uH">
@@ -245,11 +244,12 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="diaLabel" destination="mGj-CH-GMb" id="kWh-lh-DYx"/>
+                                            <outlet property="horarioLabel" destination="R2p-kP-RMj" id="EwO-bD-Vqq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="20" y="485" width="360" height="115"/>
-                                </variation>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="quT-Dr-B5N">
                                 <rect key="frame" x="20" y="186" width="250" height="50"/>
@@ -296,9 +296,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="28" y="249" width="360" height="21"/>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -331,24 +328,24 @@
                                 <exclude reference="5QS-ZZ-jZc"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8Qw-7K-qwS"/>
-                                <exclude reference="KcW-cX-eVF"/>
-                                <exclude reference="NhW-hH-Vr8"/>
-                                <exclude reference="XhH-KD-h5R"/>
-                                <exclude reference="hVW-OV-VbJ"/>
-                                <exclude reference="hwn-YK-7Yj"/>
-                                <exclude reference="4wJ-8T-kPQ"/>
-                                <exclude reference="Xnu-rS-45e"/>
                                 <exclude reference="Rx0-Eq-0sN"/>
                                 <exclude reference="T8C-Gm-jcn"/>
                                 <exclude reference="vqh-dX-gNB"/>
+                                <exclude reference="XhH-KD-h5R"/>
+                                <exclude reference="hVW-OV-VbJ"/>
+                                <exclude reference="hwn-YK-7Yj"/>
+                                <exclude reference="8Qw-7K-qwS"/>
+                                <exclude reference="KcW-cX-eVF"/>
+                                <exclude reference="NhW-hH-Vr8"/>
+                                <exclude reference="1Td-Dv-Lre"/>
+                                <exclude reference="g3k-cH-PLt"/>
                                 <exclude reference="99j-qB-4Eh"/>
                                 <exclude reference="InB-Yh-gfg"/>
                                 <exclude reference="fTu-JJ-5kC"/>
                                 <exclude reference="tuR-U9-Fyd"/>
                                 <exclude reference="vyX-ic-H4F"/>
-                                <exclude reference="1Td-Dv-Lre"/>
-                                <exclude reference="g3k-cH-PLt"/>
+                                <exclude reference="4wJ-8T-kPQ"/>
+                                <exclude reference="Xnu-rS-45e"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -360,29 +357,30 @@
                                 <include reference="5QS-ZZ-jZc"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="8Qw-7K-qwS"/>
-                                <include reference="KcW-cX-eVF"/>
-                                <include reference="NhW-hH-Vr8"/>
-                                <include reference="XhH-KD-h5R"/>
-                                <include reference="hVW-OV-VbJ"/>
-                                <include reference="hwn-YK-7Yj"/>
-                                <include reference="4wJ-8T-kPQ"/>
-                                <include reference="Xnu-rS-45e"/>
                                 <include reference="Rx0-Eq-0sN"/>
                                 <include reference="T8C-Gm-jcn"/>
                                 <include reference="vqh-dX-gNB"/>
+                                <include reference="XhH-KD-h5R"/>
+                                <include reference="hVW-OV-VbJ"/>
+                                <include reference="hwn-YK-7Yj"/>
+                                <include reference="8Qw-7K-qwS"/>
+                                <include reference="KcW-cX-eVF"/>
+                                <include reference="NhW-hH-Vr8"/>
+                                <include reference="1Td-Dv-Lre"/>
+                                <include reference="g3k-cH-PLt"/>
                                 <include reference="99j-qB-4Eh"/>
                                 <include reference="InB-Yh-gfg"/>
                                 <include reference="fTu-JJ-5kC"/>
                                 <include reference="tuR-U9-Fyd"/>
                                 <include reference="vyX-ic-H4F"/>
-                                <include reference="1Td-Dv-Lre"/>
-                                <include reference="g3k-cH-PLt"/>
+                                <include reference="4wJ-8T-kPQ"/>
+                                <include reference="Xnu-rS-45e"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="imagemView" destination="0Qr-6s-jQP" id="g33-kT-tcE"/>
+                        <outlet property="programacaoTableView" destination="KbH-Z8-ONP" id="qRi-eb-WZ1"/>
                         <outlet property="sinopseLabel" destination="4is-lg-8Hb" id="lSR-qp-a2f"/>
                         <outlet property="tituloLabel" destination="5QS-ZZ-jZc" id="3J4-rQ-euE"/>
                     </connections>
